@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item-->
+<!--        android:id="@+id/action_add_song"-->
+<!--        android:icon="@android:drawable/ic_menu_add"-->
+<!--        android:title="Add Song"-->
+<!--        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/action_search"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <item
+        android:id="@+id/sort_option"
+        android:title="Sort by"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sort_name"
+                android:orderInCategory="100"
+                android:title="@string/sort_name"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/sort_date"
+                android:orderInCategory="100"
+                android:title="@string/sort_date"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/sort_size"
+                android:orderInCategory="100"
+                android:title="@string/sort_size"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/sleep_timer"
+        android:title="Sleep Timer"
+        app:showAsAction="never">
+    </item>
+
+    <item
+        android:id="@+id/equalizer"
+        android:title="Equalizer"
+        app:showAsAction="never">
+    </item>
+</menu>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- GridView for Album or Artist list -->
+    <GridView
+        android:id="@+id/gridViewAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="8dp"
+        android:padding="8dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"/>
+
+    <!-- RecyclerView for song list after clicking an album -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>

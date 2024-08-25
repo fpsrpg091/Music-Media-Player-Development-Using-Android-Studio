@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch_equalizer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Equalizer" />
+
+    </LinearLayout>
+
+    <!-- Equalizer Graph View -->
+    <com.example.myapplication.EqualizerGraphView
+        android:id="@+id/equalizerGraphView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#FFFFFF" />
+
+    <!-- Vertical container for SeekBars -->
+    <LinearLayout
+        android:id="@+id/seekBar_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="265dp"
+        android:orientation="horizontal">
+
+        <!-- Container for the SeekBars with vertical orientation -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Label for SeekBar -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60Hz"
+                android:textAlignment="center" />
+
+            <!-- Vertical SeekBar -->
+            <SeekBar
+                android:id="@+id/seekBar_60Hz"
+                android:layout_width="200dp"
+                android:layout_height="245dp"
+                android:orientation="vertical"
+                android:rotation="270" />
+        </LinearLayout>
+
+        <!-- Repeat similar blocks for other SeekBars -->
+        <!-- Container for the second SeekBar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="230Hz"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBar_230Hz"
+                android:layout_width="200dp"
+                android:layout_height="245dp"
+                android:orientation="vertical"
+                android:rotation="270" />
+        </LinearLayout>
+
+        <!-- Container for the third SeekBar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="910Hz"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBar_910Hz"
+                android:layout_width="200dp"
+                android:layout_height="245dp"
+                android:orientation="vertical"
+                android:rotation="270" />
+        </LinearLayout>
+
+        <!-- Container for the fourth SeekBar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4kHz"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBar_4kHz"
+                android:layout_width="200dp"
+                android:layout_height="245dp"
+                android:orientation="vertical"
+                android:rotation="270" />
+        </LinearLayout>
+
+        <!-- Container for the firth SeekBar -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14kHz"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBar_14kHz"
+                android:layout_width="200dp"
+                android:layout_height="245dp"
+                android:orientation="vertical"
+                android:rotation="270" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Horizontal container for additional SeekBars -->
+    <LinearLayout
+        android:id="@+id/seekBar_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- SeekBar for Bass -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bass Control"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBar_BassControl"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- SeekBar for Surround 3D -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Surround Control"
+                android:textAlignment="center" />
+
+            <SeekBar
+                android:id="@+id/seekBar_SurroundControl"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset" />
+</LinearLayout>

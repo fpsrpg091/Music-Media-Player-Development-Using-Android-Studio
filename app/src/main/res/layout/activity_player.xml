@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+
+    <!-- Song Title -->
+    <TextView
+        android:id="@+id/textViewSongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:text="Song Title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Album Cover Image -->
+
+    <!-- Control Buttons Layout -->
+
+    <!-- Seek Bar for Progress -->
+
+    <!-- Current and Total Time Display -->
+    <SeekBar
+        android:id="@+id/seekBarProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:progress="0"
+        android:secondaryProgressTint="#FFFFFF"
+        android:thumbTint="@color/mango"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/controlsLayout" />
+
+    <LinearLayout
+        android:id="@+id/controlsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewAlbumCover">
+
+        <!-- Loop/Shuffle Toggle Button -->
+
+        <!-- Previous Button -->
+        <ImageButton
+            android:id="@+id/btnToggleLoopShuffle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Toggle Loop/Shuffle"
+            android:scaleType="fitXY"
+            android:src="@drawable/player_loop" />
+
+        <ImageButton
+            android:id="@+id/btnPrevious"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Previous"
+            android:scaleType="fitXY"
+            android:src="@drawable/player_back" />
+
+        <!-- Play/Pause Button -->
+
+        <!-- Next Button -->
+        <ImageButton
+            android:id="@+id/btnPlayPause"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Play/Pause"
+            android:scaleType="fitXY"
+            android:src="@drawable/player_play" />
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Next"
+            android:scaleType="fitXY"
+            android:src="@drawable/player_next" />
+
+        <!-- Replay Button -->
+        <ImageButton
+            android:id="@+id/btnReplay"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Replay"
+            android:scaleType="fitXY"
+            android:src="@drawable/player_no_replay" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewAlbumCover"
+        android:layout_width="305dp"
+        android:layout_height="352dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="Album Cover"
+        android:src="@drawable/album2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSongArtist" />
+
+    <TextView
+        android:id="@+id/textViewCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="124dp"
+        android:text="0:00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <TextView
+        android:id="@+id/textViewTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="8dp"
+        android:text="0:00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <Button
+        android:id="@+id/btnlyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Lyrics"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBarProgress">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSongArtist"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSongTitle"
+        tools:ignore="MissingConstraints"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="90dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

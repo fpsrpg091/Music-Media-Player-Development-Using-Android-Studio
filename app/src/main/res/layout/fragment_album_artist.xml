@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Album Selection (Selected by Default) -->
+        <TextView
+            android:id="@+id/album_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Album"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@color/peach"
+            android:padding="8dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Artist Selection -->
+        <TextView
+            android:id="@+id/artist_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Artist"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- ViewPager to switch between Album and Artist -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_container"
+        android:layout_marginTop="-1dp"
+        android:paddingTop="16dp"
+        android:layout_marginBottom="45dp"/>
+
+</RelativeLayout>
